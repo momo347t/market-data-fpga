@@ -1,0 +1,1253 @@
+{
+  "design_sha256": "07c60ff57e9e68790c9978d298c9d2614aa412772f6f496b3c1e670f46422790",
+  "harness_sha256": "8db43b37dc73ad20d36e34032c22c990bf5fd558f54c3cc86e1959e821da2338",
+  "target": "iCE40HX8K-CT256",
+  "clock_target_mhz": 50.0,
+  "seed": 1,
+  "platform": "Windows",
+  "tool_versions": {
+    "yosys": "Yosys 0.70+309 (git sha1 bd3168b1a, Release, GNU /usr/bin/x86_64-w64-mingw32-g++ 15.2.1)",
+    "nextpnr-ice40": "\"nextpnr-ice40\" -- Next Generation Place and Route (Version nextpnr-0.11.1-85-ga2c64799)"
+  },
+  "scope": "Narrow-pin observable harness; automatic pin placement; internal clock timing only. No board pinout, external I/O delay model, or on-board validation.",
+  "mapped_statistics": {
+    "creator": "Yosys 0.70+309 (git sha1 bd3168b1a, Release, GNU /usr/bin/x86_64-w64-mingw32-g++ 15.2.1)",
+    "invocation": "stat -json ",
+    "modules": {
+      "\\synthesis_top": {
+        "num_wires": 3815,
+        "num_wire_bits": 11364,
+        "num_pub_wires": 3815,
+        "num_pub_wire_bits": 11364,
+        "num_ports": 13,
+        "num_port_bits": 54,
+        "num_memories": 0,
+        "num_memory_bits": 0,
+        "num_processes": 0,
+        "num_cells": 6609,
+        "num_submodules": 0,
+        "num_cells_by_type": {
+          "$scopeinfo": 2,
+          "SB_CARRY": 186,
+          "SB_DFFE": 1824,
+          "SB_DFFER": 583,
+          "SB_DFFR": 4,
+          "SB_LUT4": 4010
+        }
+      }
+    },
+    "design": {
+      "num_wires": 3815,
+      "num_wire_bits": 11364,
+      "num_pub_wires": 3815,
+      "num_pub_wire_bits": 11364,
+      "num_ports": 13,
+      "num_port_bits": 54,
+      "num_memories": 0,
+      "num_memory_bits": 0,
+      "num_processes": 0,
+      "num_cells": 6609,
+      "num_submodules": 0,
+      "num_cells_by_type": {
+        "$scopeinfo": 2,
+        "SB_CARRY": 186,
+        "SB_DFFE": 1824,
+        "SB_DFFER": 583,
+        "SB_DFFR": 4,
+        "SB_LUT4": 4010
+      }
+    }
+  },
+  "implementation": {
+    "critical_paths": [
+      {
+        "from": "posedge clk$SB_IO_IN_$glb_clk",
+        "path": [
+          {
+            "delay": 0.5400000214576721,
+            "from": {
+              "cell": "s_eop_SB_LUT4_I1_O_SB_DFFER_E_2_Q_SB_LUT4_I3_O_SB_LUT4_O_2_I3_SB_DFFER_Q_DFFLC",
+              "loc": [
+                13,
+                11
+              ],
+              "port": "O"
+            },
+            "to": {
+              "cell": "s_eop_SB_LUT4_I1_O_SB_DFFER_E_2_Q_SB_LUT4_I3_O_SB_LUT4_O_2_I3_SB_DFFER_Q_DFFLC",
+              "loc": [
+                13,
+                11
+              ],
+              "port": "O"
+            },
+            "type": "clk-to-q"
+          },
+          {
+            "delay": 0.5879999995231628,
+            "from": {
+              "cell": "s_eop_SB_LUT4_I1_O_SB_DFFER_E_2_Q_SB_LUT4_I3_O_SB_LUT4_O_2_I3_SB_DFFER_Q_DFFLC",
+              "loc": [
+                13,
+                11
+              ],
+              "port": "O"
+            },
+            "net": "s_eop_SB_LUT4_I1_O_SB_DFFER_E_2_Q_SB_LUT4_I3_O_SB_LUT4_O_2_I3[2]",
+            "sources": [
+              "C:\\Users\\mohammed\\Desktop\\INTERNSHIP\\.tools\\oss-cad-suite\\bin\\../share/yosys/ice40/cells_map.v:6.21-6.22"
+            ],
+            "to": {
+              "cell": "s_eop_SB_LUT4_I1_O_SB_DFFER_E_2_Q_SB_LUT4_I3_O_SB_LUT4_O_2_LC",
+              "loc": [
+                13,
+                11
+              ],
+              "port": "I3"
+            },
+            "type": "routing"
+          },
+          {
+            "delay": 0.3149999976158142,
+            "from": {
+              "cell": "s_eop_SB_LUT4_I1_O_SB_DFFER_E_2_Q_SB_LUT4_I3_O_SB_LUT4_O_2_LC",
+              "loc": [
+                13,
+                11
+              ],
+              "port": "I3"
+            },
+            "to": {
+              "cell": "s_eop_SB_LUT4_I1_O_SB_DFFER_E_2_Q_SB_LUT4_I3_O_SB_LUT4_O_2_LC",
+              "loc": [
+                13,
+                11
+              ],
+              "port": "O"
+            },
+            "type": "logic"
+          },
+          {
+            "delay": 1.6449999809265137,
+            "from": {
+              "cell": "s_eop_SB_LUT4_I1_O_SB_DFFER_E_2_Q_SB_LUT4_I3_O_SB_LUT4_O_2_LC",
+              "loc": [
+                13,
+                11
+              ],
+              "port": "O"
+            },
+            "net": "s_eop_SB_LUT4_I1_O_SB_DFFER_E_2_Q_SB_LUT4_I3_O[2]",
+            "sources": [
+              "C:\\Users\\mohammed\\Desktop\\INTERNSHIP\\.tools\\oss-cad-suite\\bin\\../share/yosys/ice40/cells_map.v:6.21-6.22"
+            ],
+            "to": {
+              "cell": "core.output_fifo.memory[1]_SB_DFFE_Q_227_D_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_O_1_I3_SB_LUT4_O_LC",
+              "loc": [
+                15,
+                18
+              ],
+              "port": "I2"
+            },
+            "type": "routing"
+          },
+          {
+            "delay": 0.3779999911785126,
+            "from": {
+              "cell": "core.output_fifo.memory[1]_SB_DFFE_Q_227_D_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_O_1_I3_SB_LUT4_O_LC",
+              "loc": [
+                15,
+                18
+              ],
+              "port": "I2"
+            },
+            "to": {
+              "cell": "core.output_fifo.memory[1]_SB_DFFE_Q_227_D_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_O_1_I3_SB_LUT4_O_LC",
+              "loc": [
+                15,
+                18
+              ],
+              "port": "O"
+            },
+            "type": "logic"
+          },
+          {
+            "delay": 0.5879999995231628,
+            "from": {
+              "cell": "core.output_fifo.memory[1]_SB_DFFE_Q_227_D_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_O_1_I3_SB_LUT4_O_LC",
+              "loc": [
+                15,
+                18
+              ],
+              "port": "O"
+            },
+            "net": "core.output_fifo.memory[0]_SB_DFFE_Q_95_D_SB_LUT4_O_I0_SB_LUT4_I2_O_SB_LUT4_O_2_I3[2]",
+            "sources": [
+              "C:\\Users\\mohammed\\Desktop\\INTERNSHIP\\.tools\\oss-cad-suite\\bin\\../share/yosys/ice40/cells_map.v:6.21-6.22"
+            ],
+            "to": {
+              "cell": "core.output_fifo.memory[1]_SB_DFFE_Q_227_D_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_O_1_I2_SB_LUT4_I2_1_LC",
+              "loc": [
+                16,
+                19
+              ],
+              "port": "I3"
+            },
+            "type": "routing"
+          },
+          {
+            "delay": 0.3149999976158142,
+            "from": {
+              "cell": "core.output_fifo.memory[1]_SB_DFFE_Q_227_D_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_O_1_I2_SB_LUT4_I2_1_LC",
+              "loc": [
+                16,
+                19
+              ],
+              "port": "I3"
+            },
+            "to": {
+              "cell": "core.output_fifo.memory[1]_SB_DFFE_Q_227_D_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_O_1_I2_SB_LUT4_I2_1_LC",
+              "loc": [
+                16,
+                19
+              ],
+              "port": "O"
+            },
+            "type": "logic"
+          },
+          {
+            "delay": 2.0160000324249268,
+            "from": {
+              "cell": "core.output_fifo.memory[1]_SB_DFFE_Q_227_D_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_O_1_I2_SB_LUT4_I2_1_LC",
+              "loc": [
+                16,
+                19
+              ],
+              "port": "O"
+            },
+            "net": "core.output_fifo.memory[0]_SB_DFFE_Q_100_D_SB_LUT4_O_I3[1]",
+            "sources": [
+              "C:\\Users\\mohammed\\Desktop\\INTERNSHIP\\.tools\\oss-cad-suite\\bin\\../share/yosys/ice40/cells_map.v:6.21-6.22"
+            ],
+            "to": {
+              "cell": "core.output_fifo.memory[1]_SB_DFFE_Q_230_D_SB_LUT4_O_I3_SB_LUT4_O_1_I3_SB_LUT4_O_2_LC",
+              "loc": [
+                13,
+                10
+              ],
+              "port": "I3"
+            },
+            "type": "routing"
+          },
+          {
+            "delay": 0.3149999976158142,
+            "from": {
+              "cell": "core.output_fifo.memory[1]_SB_DFFE_Q_230_D_SB_LUT4_O_I3_SB_LUT4_O_1_I3_SB_LUT4_O_2_LC",
+              "loc": [
+                13,
+                10
+              ],
+              "port": "I3"
+            },
+            "to": {
+              "cell": "core.output_fifo.memory[1]_SB_DFFE_Q_230_D_SB_LUT4_O_I3_SB_LUT4_O_1_I3_SB_LUT4_O_2_LC",
+              "loc": [
+                13,
+                10
+              ],
+              "port": "O"
+            },
+            "type": "logic"
+          },
+          {
+            "delay": 0.5879999995231628,
+            "from": {
+              "cell": "core.output_fifo.memory[1]_SB_DFFE_Q_230_D_SB_LUT4_O_I3_SB_LUT4_O_1_I3_SB_LUT4_O_2_LC",
+              "loc": [
+                13,
+                10
+              ],
+              "port": "O"
+            },
+            "net": "core.output_fifo.memory[1]_SB_DFFE_Q_230_D_SB_LUT4_O_I3_SB_LUT4_O_1_I3[2]",
+            "sources": [
+              "C:\\Users\\mohammed\\Desktop\\INTERNSHIP\\.tools\\oss-cad-suite\\bin\\../share/yosys/ice40/cells_map.v:6.21-6.22"
+            ],
+            "to": {
+              "cell": "core.output_fifo.memory[1]_SB_DFFE_Q_230_D_SB_LUT4_O_I3_SB_LUT4_O_1_LC",
+              "loc": [
+                14,
+                10
+              ],
+              "port": "I3"
+            },
+            "type": "routing"
+          },
+          {
+            "delay": 0.3149999976158142,
+            "from": {
+              "cell": "core.output_fifo.memory[1]_SB_DFFE_Q_230_D_SB_LUT4_O_I3_SB_LUT4_O_1_LC",
+              "loc": [
+                14,
+                10
+              ],
+              "port": "I3"
+            },
+            "to": {
+              "cell": "core.output_fifo.memory[1]_SB_DFFE_Q_230_D_SB_LUT4_O_I3_SB_LUT4_O_1_LC",
+              "loc": [
+                14,
+                10
+              ],
+              "port": "O"
+            },
+            "type": "logic"
+          },
+          {
+            "delay": 1.5889999866485596,
+            "from": {
+              "cell": "core.output_fifo.memory[1]_SB_DFFE_Q_230_D_SB_LUT4_O_I3_SB_LUT4_O_1_LC",
+              "loc": [
+                14,
+                10
+              ],
+              "port": "O"
+            },
+            "net": "core.output_fifo.memory[1]_SB_DFFE_Q_230_D_SB_LUT4_O_I3[1]",
+            "sources": [
+              "C:\\Users\\mohammed\\Desktop\\INTERNSHIP\\.tools\\oss-cad-suite\\bin\\../share/yosys/ice40/cells_map.v:6.21-6.22"
+            ],
+            "to": {
+              "cell": "core.output_fifo.memory[1]_SB_DFFE_Q_227_D_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_O_LC",
+              "loc": [
+                18,
+                14
+              ],
+              "port": "I3"
+            },
+            "type": "routing"
+          },
+          {
+            "delay": 0.3149999976158142,
+            "from": {
+              "cell": "core.output_fifo.memory[1]_SB_DFFE_Q_227_D_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_O_LC",
+              "loc": [
+                18,
+                14
+              ],
+              "port": "I3"
+            },
+            "to": {
+              "cell": "core.output_fifo.memory[1]_SB_DFFE_Q_227_D_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_O_LC",
+              "loc": [
+                18,
+                14
+              ],
+              "port": "O"
+            },
+            "type": "logic"
+          },
+          {
+            "delay": 0.5879999995231628,
+            "from": {
+              "cell": "core.output_fifo.memory[1]_SB_DFFE_Q_227_D_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_O_LC",
+              "loc": [
+                18,
+                14
+              ],
+              "port": "O"
+            },
+            "net": "core.output_fifo.memory[1]_SB_DFFE_Q_227_D_SB_LUT4_O_I3_SB_LUT4_I3_O[1]",
+            "sources": [
+              "C:\\Users\\mohammed\\Desktop\\INTERNSHIP\\.tools\\oss-cad-suite\\bin\\../share/yosys/ice40/cells_map.v:6.21-6.22"
+            ],
+            "to": {
+              "cell": "s_eop_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_DFFER_D_Q_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_O_SB_LUT4_I3_O_SB_LUT4_O_LC",
+              "loc": [
+                18,
+                15
+              ],
+              "port": "I1"
+            },
+            "type": "routing"
+          },
+          {
+            "delay": 0.39899998903274536,
+            "from": {
+              "cell": "s_eop_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_DFFER_D_Q_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_O_SB_LUT4_I3_O_SB_LUT4_O_LC",
+              "loc": [
+                18,
+                15
+              ],
+              "port": "I1"
+            },
+            "to": {
+              "cell": "s_eop_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_DFFER_D_Q_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_O_SB_LUT4_I3_O_SB_LUT4_O_LC",
+              "loc": [
+                18,
+                15
+              ],
+              "port": "O"
+            },
+            "type": "logic"
+          },
+          {
+            "delay": 0.5879999995231628,
+            "from": {
+              "cell": "s_eop_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_DFFER_D_Q_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_O_SB_LUT4_I3_O_SB_LUT4_O_LC",
+              "loc": [
+                18,
+                15
+              ],
+              "port": "O"
+            },
+            "net": "error_code_SB_DFFR_Q_1_D_SB_LUT4_O_2_I1[2]",
+            "sources": [
+              "C:\\Users\\mohammed\\Desktop\\INTERNSHIP\\.tools\\oss-cad-suite\\bin\\../share/yosys/ice40/cells_map.v:6.21-6.22"
+            ],
+            "to": {
+              "cell": "s_eop_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_DFFER_D_Q_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_O_SB_LUT4_I3_O_SB_LUT4_I3_LC",
+              "loc": [
+                18,
+                14
+              ],
+              "port": "I2"
+            },
+            "type": "routing"
+          },
+          {
+            "delay": 0.3779999911785126,
+            "from": {
+              "cell": "s_eop_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_DFFER_D_Q_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_O_SB_LUT4_I3_O_SB_LUT4_I3_LC",
+              "loc": [
+                18,
+                14
+              ],
+              "port": "I2"
+            },
+            "to": {
+              "cell": "s_eop_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_DFFER_D_Q_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_O_SB_LUT4_I3_O_SB_LUT4_I3_LC",
+              "loc": [
+                18,
+                14
+              ],
+              "port": "O"
+            },
+            "type": "logic"
+          },
+          {
+            "delay": 1.5889999866485596,
+            "from": {
+              "cell": "s_eop_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_DFFER_D_Q_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_O_SB_LUT4_I3_O_SB_LUT4_I3_LC",
+              "loc": [
+                18,
+                14
+              ],
+              "port": "O"
+            },
+            "net": "m_valid_SB_LUT4_I3_O[1]",
+            "sources": [
+              "C:\\Users\\mohammed\\Desktop\\INTERNSHIP\\.tools\\oss-cad-suite\\bin\\../share/yosys/ice40/cells_map.v:6.21-6.22"
+            ],
+            "to": {
+              "cell": "s_eop_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_DFFER_D_Q_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_O_SB_LUT4_I3_O_SB_LUT4_I3_O_SB_DFFER_Q_D_SB_LUT4_O_I3_SB_LUT4_I2_3_LC",
+              "loc": [
+                11,
+                15
+              ],
+              "port": "I3"
+            },
+            "type": "routing"
+          },
+          {
+            "delay": 0.3149999976158142,
+            "from": {
+              "cell": "s_eop_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_DFFER_D_Q_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_O_SB_LUT4_I3_O_SB_LUT4_I3_O_SB_DFFER_Q_D_SB_LUT4_O_I3_SB_LUT4_I2_3_LC",
+              "loc": [
+                11,
+                15
+              ],
+              "port": "I3"
+            },
+            "to": {
+              "cell": "s_eop_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_DFFER_D_Q_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_O_SB_LUT4_I3_O_SB_LUT4_I3_O_SB_DFFER_Q_D_SB_LUT4_O_I3_SB_LUT4_I2_3_LC",
+              "loc": [
+                11,
+                15
+              ],
+              "port": "O"
+            },
+            "type": "logic"
+          },
+          {
+            "delay": 1.6519999504089355,
+            "from": {
+              "cell": "s_eop_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_DFFER_D_Q_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_O_SB_LUT4_I3_O_SB_LUT4_I3_O_SB_DFFER_Q_D_SB_LUT4_O_I3_SB_LUT4_I2_3_LC",
+              "loc": [
+                11,
+                15
+              ],
+              "port": "O"
+            },
+            "net": "s_eop_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_DFFER_D_Q_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_O_SB_LUT4_I3_O_SB_LUT4_I3_O_SB_DFFER_Q_D_SB_LUT4_O_I3_SB_LUT4_I2_3_O",
+            "sources": [],
+            "to": {
+              "cell": "$gbuf_s_eop_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_DFFER_D_Q_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_O_SB_LUT4_I3_O_SB_LUT4_I3_O_SB_DFFER_Q_D_SB_LUT4_O_I3_SB_LUT4_I2_3_O_$glb_ce",
+              "loc": [
+                0,
+                17
+              ],
+              "port": "USER_SIGNAL_TO_GLOBAL_BUFFER"
+            },
+            "type": "routing"
+          },
+          {
+            "delay": 0.6169999837875366,
+            "from": {
+              "cell": "$gbuf_s_eop_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_DFFER_D_Q_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_O_SB_LUT4_I3_O_SB_LUT4_I3_O_SB_DFFER_Q_D_SB_LUT4_O_I3_SB_LUT4_I2_3_O_$glb_ce",
+              "loc": [
+                0,
+                17
+              ],
+              "port": "USER_SIGNAL_TO_GLOBAL_BUFFER"
+            },
+            "to": {
+              "cell": "$gbuf_s_eop_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_DFFER_D_Q_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_O_SB_LUT4_I3_O_SB_LUT4_I3_O_SB_DFFER_Q_D_SB_LUT4_O_I3_SB_LUT4_I2_3_O_$glb_ce",
+              "loc": [
+                0,
+                17
+              ],
+              "port": "GLOBAL_BUFFER_OUTPUT"
+            },
+            "type": "logic"
+          },
+          {
+            "delay": 0.6029999852180481,
+            "from": {
+              "cell": "$gbuf_s_eop_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_DFFER_D_Q_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_O_SB_LUT4_I3_O_SB_LUT4_I3_O_SB_DFFER_Q_D_SB_LUT4_O_I3_SB_LUT4_I2_3_O_$glb_ce",
+              "loc": [
+                0,
+                17
+              ],
+              "port": "GLOBAL_BUFFER_OUTPUT"
+            },
+            "net": "s_eop_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_DFFER_D_Q_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_O_SB_LUT4_I3_O_SB_LUT4_I3_O_SB_DFFER_Q_D_SB_LUT4_O_I3_SB_LUT4_I2_3_O_$glb_ce",
+            "sources": [],
+            "to": {
+              "cell": "core.output_fifo.memory[1]_SB_DFFE_Q_112_DFFLC",
+              "loc": [
+                15,
+                28
+              ],
+              "port": "CEN"
+            },
+            "type": "routing"
+          },
+          {
+            "delay": 0.10000000149011612,
+            "from": {
+              "cell": "core.output_fifo.memory[1]_SB_DFFE_Q_112_DFFLC",
+              "loc": [
+                15,
+                28
+              ],
+              "port": "CEN"
+            },
+            "to": {
+              "cell": "core.output_fifo.memory[1]_SB_DFFE_Q_112_DFFLC",
+              "loc": [
+                15,
+                28
+              ],
+              "port": "CEN"
+            },
+            "type": "setup"
+          }
+        ],
+        "to": "posedge clk$SB_IO_IN_$glb_clk"
+      },
+      {
+        "from": "<async>",
+        "path": [
+          {
+            "delay": 0,
+            "from": {
+              "cell": "rst_n$sb_io",
+              "loc": [
+                9,
+                33
+              ],
+              "port": "D_IN_0"
+            },
+            "to": {
+              "cell": "rst_n$sb_io",
+              "loc": [
+                9,
+                33
+              ],
+              "port": "D_IN_0"
+            },
+            "type": "source"
+          },
+          {
+            "delay": 3.1110000610351562,
+            "from": {
+              "cell": "rst_n$sb_io",
+              "loc": [
+                9,
+                33
+              ],
+              "port": "D_IN_0"
+            },
+            "net": "rst_n$SB_IO_IN",
+            "sources": [
+              "bench/synthesis_top.sv:7.21-7.26"
+            ],
+            "to": {
+              "cell": "s_ready_SB_LUT4_O_LC",
+              "loc": [
+                10,
+                8
+              ],
+              "port": "I1"
+            },
+            "type": "routing"
+          },
+          {
+            "delay": 0.39899998903274536,
+            "from": {
+              "cell": "s_ready_SB_LUT4_O_LC",
+              "loc": [
+                10,
+                8
+              ],
+              "port": "I1"
+            },
+            "to": {
+              "cell": "s_ready_SB_LUT4_O_LC",
+              "loc": [
+                10,
+                8
+              ],
+              "port": "O"
+            },
+            "type": "logic"
+          },
+          {
+            "delay": 1.5889999866485596,
+            "from": {
+              "cell": "s_ready_SB_LUT4_O_LC",
+              "loc": [
+                10,
+                8
+              ],
+              "port": "O"
+            },
+            "net": "s_ready$SB_IO_OUT",
+            "sources": [
+              "bench/synthesis_top.sv:10.17-10.24"
+            ],
+            "to": {
+              "cell": "s_ready$sb_io",
+              "loc": [
+                0,
+                8
+              ],
+              "port": "D_OUT_0"
+            },
+            "type": "routing"
+          }
+        ],
+        "to": "<async>"
+      },
+      {
+        "from": "<async>",
+        "path": [
+          {
+            "delay": 0,
+            "from": {
+              "cell": "s_sop$sb_io",
+              "loc": [
+                33,
+                20
+              ],
+              "port": "D_IN_0"
+            },
+            "to": {
+              "cell": "s_sop$sb_io",
+              "loc": [
+                33,
+                20
+              ],
+              "port": "D_IN_0"
+            },
+            "type": "source"
+          },
+          {
+            "delay": 2.6559998989105225,
+            "from": {
+              "cell": "s_sop$sb_io",
+              "loc": [
+                33,
+                20
+              ],
+              "port": "D_IN_0"
+            },
+            "net": "s_sop$SB_IO_IN",
+            "sources": [
+              "C:\\Users\\mohammed\\Desktop\\INTERNSHIP\\.tools\\oss-cad-suite\\bin\\../share/yosys/ice40/cells_map.v:6.21-6.22"
+            ],
+            "to": {
+              "cell": "s_eop_SB_LUT4_I1_O_SB_DFFER_E_2_Q_SB_LUT4_I3_O_SB_LUT4_O_2_LC",
+              "loc": [
+                13,
+                11
+              ],
+              "port": "I1"
+            },
+            "type": "routing"
+          },
+          {
+            "delay": 0.39899998903274536,
+            "from": {
+              "cell": "s_eop_SB_LUT4_I1_O_SB_DFFER_E_2_Q_SB_LUT4_I3_O_SB_LUT4_O_2_LC",
+              "loc": [
+                13,
+                11
+              ],
+              "port": "I1"
+            },
+            "to": {
+              "cell": "s_eop_SB_LUT4_I1_O_SB_DFFER_E_2_Q_SB_LUT4_I3_O_SB_LUT4_O_2_LC",
+              "loc": [
+                13,
+                11
+              ],
+              "port": "O"
+            },
+            "type": "logic"
+          },
+          {
+            "delay": 1.6449999809265137,
+            "from": {
+              "cell": "s_eop_SB_LUT4_I1_O_SB_DFFER_E_2_Q_SB_LUT4_I3_O_SB_LUT4_O_2_LC",
+              "loc": [
+                13,
+                11
+              ],
+              "port": "O"
+            },
+            "net": "s_eop_SB_LUT4_I1_O_SB_DFFER_E_2_Q_SB_LUT4_I3_O[2]",
+            "sources": [
+              "C:\\Users\\mohammed\\Desktop\\INTERNSHIP\\.tools\\oss-cad-suite\\bin\\../share/yosys/ice40/cells_map.v:6.21-6.22"
+            ],
+            "to": {
+              "cell": "core.output_fifo.memory[1]_SB_DFFE_Q_227_D_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_O_1_I3_SB_LUT4_O_LC",
+              "loc": [
+                15,
+                18
+              ],
+              "port": "I2"
+            },
+            "type": "routing"
+          },
+          {
+            "delay": 0.3779999911785126,
+            "from": {
+              "cell": "core.output_fifo.memory[1]_SB_DFFE_Q_227_D_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_O_1_I3_SB_LUT4_O_LC",
+              "loc": [
+                15,
+                18
+              ],
+              "port": "I2"
+            },
+            "to": {
+              "cell": "core.output_fifo.memory[1]_SB_DFFE_Q_227_D_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_O_1_I3_SB_LUT4_O_LC",
+              "loc": [
+                15,
+                18
+              ],
+              "port": "O"
+            },
+            "type": "logic"
+          },
+          {
+            "delay": 0.5879999995231628,
+            "from": {
+              "cell": "core.output_fifo.memory[1]_SB_DFFE_Q_227_D_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_O_1_I3_SB_LUT4_O_LC",
+              "loc": [
+                15,
+                18
+              ],
+              "port": "O"
+            },
+            "net": "core.output_fifo.memory[0]_SB_DFFE_Q_95_D_SB_LUT4_O_I0_SB_LUT4_I2_O_SB_LUT4_O_2_I3[2]",
+            "sources": [
+              "C:\\Users\\mohammed\\Desktop\\INTERNSHIP\\.tools\\oss-cad-suite\\bin\\../share/yosys/ice40/cells_map.v:6.21-6.22"
+            ],
+            "to": {
+              "cell": "core.output_fifo.memory[1]_SB_DFFE_Q_227_D_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_O_1_I2_SB_LUT4_I2_1_LC",
+              "loc": [
+                16,
+                19
+              ],
+              "port": "I3"
+            },
+            "type": "routing"
+          },
+          {
+            "delay": 0.3149999976158142,
+            "from": {
+              "cell": "core.output_fifo.memory[1]_SB_DFFE_Q_227_D_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_O_1_I2_SB_LUT4_I2_1_LC",
+              "loc": [
+                16,
+                19
+              ],
+              "port": "I3"
+            },
+            "to": {
+              "cell": "core.output_fifo.memory[1]_SB_DFFE_Q_227_D_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_O_1_I2_SB_LUT4_I2_1_LC",
+              "loc": [
+                16,
+                19
+              ],
+              "port": "O"
+            },
+            "type": "logic"
+          },
+          {
+            "delay": 2.0160000324249268,
+            "from": {
+              "cell": "core.output_fifo.memory[1]_SB_DFFE_Q_227_D_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_O_1_I2_SB_LUT4_I2_1_LC",
+              "loc": [
+                16,
+                19
+              ],
+              "port": "O"
+            },
+            "net": "core.output_fifo.memory[0]_SB_DFFE_Q_100_D_SB_LUT4_O_I3[1]",
+            "sources": [
+              "C:\\Users\\mohammed\\Desktop\\INTERNSHIP\\.tools\\oss-cad-suite\\bin\\../share/yosys/ice40/cells_map.v:6.21-6.22"
+            ],
+            "to": {
+              "cell": "core.output_fifo.memory[1]_SB_DFFE_Q_230_D_SB_LUT4_O_I3_SB_LUT4_O_1_I3_SB_LUT4_O_2_LC",
+              "loc": [
+                13,
+                10
+              ],
+              "port": "I3"
+            },
+            "type": "routing"
+          },
+          {
+            "delay": 0.3149999976158142,
+            "from": {
+              "cell": "core.output_fifo.memory[1]_SB_DFFE_Q_230_D_SB_LUT4_O_I3_SB_LUT4_O_1_I3_SB_LUT4_O_2_LC",
+              "loc": [
+                13,
+                10
+              ],
+              "port": "I3"
+            },
+            "to": {
+              "cell": "core.output_fifo.memory[1]_SB_DFFE_Q_230_D_SB_LUT4_O_I3_SB_LUT4_O_1_I3_SB_LUT4_O_2_LC",
+              "loc": [
+                13,
+                10
+              ],
+              "port": "O"
+            },
+            "type": "logic"
+          },
+          {
+            "delay": 0.5879999995231628,
+            "from": {
+              "cell": "core.output_fifo.memory[1]_SB_DFFE_Q_230_D_SB_LUT4_O_I3_SB_LUT4_O_1_I3_SB_LUT4_O_2_LC",
+              "loc": [
+                13,
+                10
+              ],
+              "port": "O"
+            },
+            "net": "core.output_fifo.memory[1]_SB_DFFE_Q_230_D_SB_LUT4_O_I3_SB_LUT4_O_1_I3[2]",
+            "sources": [
+              "C:\\Users\\mohammed\\Desktop\\INTERNSHIP\\.tools\\oss-cad-suite\\bin\\../share/yosys/ice40/cells_map.v:6.21-6.22"
+            ],
+            "to": {
+              "cell": "core.output_fifo.memory[1]_SB_DFFE_Q_230_D_SB_LUT4_O_I3_SB_LUT4_O_1_LC",
+              "loc": [
+                14,
+                10
+              ],
+              "port": "I3"
+            },
+            "type": "routing"
+          },
+          {
+            "delay": 0.3149999976158142,
+            "from": {
+              "cell": "core.output_fifo.memory[1]_SB_DFFE_Q_230_D_SB_LUT4_O_I3_SB_LUT4_O_1_LC",
+              "loc": [
+                14,
+                10
+              ],
+              "port": "I3"
+            },
+            "to": {
+              "cell": "core.output_fifo.memory[1]_SB_DFFE_Q_230_D_SB_LUT4_O_I3_SB_LUT4_O_1_LC",
+              "loc": [
+                14,
+                10
+              ],
+              "port": "O"
+            },
+            "type": "logic"
+          },
+          {
+            "delay": 1.5889999866485596,
+            "from": {
+              "cell": "core.output_fifo.memory[1]_SB_DFFE_Q_230_D_SB_LUT4_O_I3_SB_LUT4_O_1_LC",
+              "loc": [
+                14,
+                10
+              ],
+              "port": "O"
+            },
+            "net": "core.output_fifo.memory[1]_SB_DFFE_Q_230_D_SB_LUT4_O_I3[1]",
+            "sources": [
+              "C:\\Users\\mohammed\\Desktop\\INTERNSHIP\\.tools\\oss-cad-suite\\bin\\../share/yosys/ice40/cells_map.v:6.21-6.22"
+            ],
+            "to": {
+              "cell": "core.output_fifo.memory[1]_SB_DFFE_Q_227_D_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_O_LC",
+              "loc": [
+                18,
+                14
+              ],
+              "port": "I3"
+            },
+            "type": "routing"
+          },
+          {
+            "delay": 0.3149999976158142,
+            "from": {
+              "cell": "core.output_fifo.memory[1]_SB_DFFE_Q_227_D_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_O_LC",
+              "loc": [
+                18,
+                14
+              ],
+              "port": "I3"
+            },
+            "to": {
+              "cell": "core.output_fifo.memory[1]_SB_DFFE_Q_227_D_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_O_LC",
+              "loc": [
+                18,
+                14
+              ],
+              "port": "O"
+            },
+            "type": "logic"
+          },
+          {
+            "delay": 0.5879999995231628,
+            "from": {
+              "cell": "core.output_fifo.memory[1]_SB_DFFE_Q_227_D_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_O_LC",
+              "loc": [
+                18,
+                14
+              ],
+              "port": "O"
+            },
+            "net": "core.output_fifo.memory[1]_SB_DFFE_Q_227_D_SB_LUT4_O_I3_SB_LUT4_I3_O[1]",
+            "sources": [
+              "C:\\Users\\mohammed\\Desktop\\INTERNSHIP\\.tools\\oss-cad-suite\\bin\\../share/yosys/ice40/cells_map.v:6.21-6.22"
+            ],
+            "to": {
+              "cell": "s_eop_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_DFFER_D_Q_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_O_SB_LUT4_I3_O_SB_LUT4_O_LC",
+              "loc": [
+                18,
+                15
+              ],
+              "port": "I1"
+            },
+            "type": "routing"
+          },
+          {
+            "delay": 0.39899998903274536,
+            "from": {
+              "cell": "s_eop_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_DFFER_D_Q_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_O_SB_LUT4_I3_O_SB_LUT4_O_LC",
+              "loc": [
+                18,
+                15
+              ],
+              "port": "I1"
+            },
+            "to": {
+              "cell": "s_eop_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_DFFER_D_Q_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_O_SB_LUT4_I3_O_SB_LUT4_O_LC",
+              "loc": [
+                18,
+                15
+              ],
+              "port": "O"
+            },
+            "type": "logic"
+          },
+          {
+            "delay": 0.5879999995231628,
+            "from": {
+              "cell": "s_eop_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_DFFER_D_Q_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_O_SB_LUT4_I3_O_SB_LUT4_O_LC",
+              "loc": [
+                18,
+                15
+              ],
+              "port": "O"
+            },
+            "net": "error_code_SB_DFFR_Q_1_D_SB_LUT4_O_2_I1[2]",
+            "sources": [
+              "C:\\Users\\mohammed\\Desktop\\INTERNSHIP\\.tools\\oss-cad-suite\\bin\\../share/yosys/ice40/cells_map.v:6.21-6.22"
+            ],
+            "to": {
+              "cell": "s_eop_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_DFFER_D_Q_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_O_SB_LUT4_I3_O_SB_LUT4_I3_LC",
+              "loc": [
+                18,
+                14
+              ],
+              "port": "I2"
+            },
+            "type": "routing"
+          },
+          {
+            "delay": 0.3779999911785126,
+            "from": {
+              "cell": "s_eop_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_DFFER_D_Q_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_O_SB_LUT4_I3_O_SB_LUT4_I3_LC",
+              "loc": [
+                18,
+                14
+              ],
+              "port": "I2"
+            },
+            "to": {
+              "cell": "s_eop_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_DFFER_D_Q_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_O_SB_LUT4_I3_O_SB_LUT4_I3_LC",
+              "loc": [
+                18,
+                14
+              ],
+              "port": "O"
+            },
+            "type": "logic"
+          },
+          {
+            "delay": 1.5889999866485596,
+            "from": {
+              "cell": "s_eop_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_DFFER_D_Q_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_O_SB_LUT4_I3_O_SB_LUT4_I3_LC",
+              "loc": [
+                18,
+                14
+              ],
+              "port": "O"
+            },
+            "net": "m_valid_SB_LUT4_I3_O[1]",
+            "sources": [
+              "C:\\Users\\mohammed\\Desktop\\INTERNSHIP\\.tools\\oss-cad-suite\\bin\\../share/yosys/ice40/cells_map.v:6.21-6.22"
+            ],
+            "to": {
+              "cell": "s_eop_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_DFFER_D_Q_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_O_SB_LUT4_I3_O_SB_LUT4_I3_O_SB_DFFER_Q_D_SB_LUT4_O_I3_SB_LUT4_I2_3_LC",
+              "loc": [
+                11,
+                15
+              ],
+              "port": "I3"
+            },
+            "type": "routing"
+          },
+          {
+            "delay": 0.3149999976158142,
+            "from": {
+              "cell": "s_eop_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_DFFER_D_Q_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_O_SB_LUT4_I3_O_SB_LUT4_I3_O_SB_DFFER_Q_D_SB_LUT4_O_I3_SB_LUT4_I2_3_LC",
+              "loc": [
+                11,
+                15
+              ],
+              "port": "I3"
+            },
+            "to": {
+              "cell": "s_eop_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_DFFER_D_Q_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_O_SB_LUT4_I3_O_SB_LUT4_I3_O_SB_DFFER_Q_D_SB_LUT4_O_I3_SB_LUT4_I2_3_LC",
+              "loc": [
+                11,
+                15
+              ],
+              "port": "O"
+            },
+            "type": "logic"
+          },
+          {
+            "delay": 1.6519999504089355,
+            "from": {
+              "cell": "s_eop_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_DFFER_D_Q_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_O_SB_LUT4_I3_O_SB_LUT4_I3_O_SB_DFFER_Q_D_SB_LUT4_O_I3_SB_LUT4_I2_3_LC",
+              "loc": [
+                11,
+                15
+              ],
+              "port": "O"
+            },
+            "net": "s_eop_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_DFFER_D_Q_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_O_SB_LUT4_I3_O_SB_LUT4_I3_O_SB_DFFER_Q_D_SB_LUT4_O_I3_SB_LUT4_I2_3_O",
+            "sources": [],
+            "to": {
+              "cell": "$gbuf_s_eop_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_DFFER_D_Q_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_O_SB_LUT4_I3_O_SB_LUT4_I3_O_SB_DFFER_Q_D_SB_LUT4_O_I3_SB_LUT4_I2_3_O_$glb_ce",
+              "loc": [
+                0,
+                17
+              ],
+              "port": "USER_SIGNAL_TO_GLOBAL_BUFFER"
+            },
+            "type": "routing"
+          },
+          {
+            "delay": 0.6169999837875366,
+            "from": {
+              "cell": "$gbuf_s_eop_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_DFFER_D_Q_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_O_SB_LUT4_I3_O_SB_LUT4_I3_O_SB_DFFER_Q_D_SB_LUT4_O_I3_SB_LUT4_I2_3_O_$glb_ce",
+              "loc": [
+                0,
+                17
+              ],
+              "port": "USER_SIGNAL_TO_GLOBAL_BUFFER"
+            },
+            "to": {
+              "cell": "$gbuf_s_eop_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_DFFER_D_Q_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_O_SB_LUT4_I3_O_SB_LUT4_I3_O_SB_DFFER_Q_D_SB_LUT4_O_I3_SB_LUT4_I2_3_O_$glb_ce",
+              "loc": [
+                0,
+                17
+              ],
+              "port": "GLOBAL_BUFFER_OUTPUT"
+            },
+            "type": "logic"
+          },
+          {
+            "delay": 0.6029999852180481,
+            "from": {
+              "cell": "$gbuf_s_eop_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_DFFER_D_Q_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_O_SB_LUT4_I3_O_SB_LUT4_I3_O_SB_DFFER_Q_D_SB_LUT4_O_I3_SB_LUT4_I2_3_O_$glb_ce",
+              "loc": [
+                0,
+                17
+              ],
+              "port": "GLOBAL_BUFFER_OUTPUT"
+            },
+            "net": "s_eop_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_DFFER_D_Q_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_O_SB_LUT4_I3_O_SB_LUT4_I3_O_SB_DFFER_Q_D_SB_LUT4_O_I3_SB_LUT4_I2_3_O_$glb_ce",
+            "sources": [],
+            "to": {
+              "cell": "core.output_fifo.memory[1]_SB_DFFE_Q_112_DFFLC",
+              "loc": [
+                15,
+                28
+              ],
+              "port": "CEN"
+            },
+            "type": "routing"
+          },
+          {
+            "delay": 0.10000000149011612,
+            "from": {
+              "cell": "core.output_fifo.memory[1]_SB_DFFE_Q_112_DFFLC",
+              "loc": [
+                15,
+                28
+              ],
+              "port": "CEN"
+            },
+            "to": {
+              "cell": "core.output_fifo.memory[1]_SB_DFFE_Q_112_DFFLC",
+              "loc": [
+                15,
+                28
+              ],
+              "port": "CEN"
+            },
+            "type": "setup"
+          }
+        ],
+        "to": "posedge clk$SB_IO_IN_$glb_clk"
+      },
+      {
+        "from": "posedge clk$SB_IO_IN_$glb_clk",
+        "path": [
+          {
+            "delay": 0.5400000214576721,
+            "from": {
+              "cell": "digest_SB_DFFER_Q_6_D_SB_LUT4_O_LC",
+              "loc": [
+                7,
+                10
+              ],
+              "port": "O"
+            },
+            "to": {
+              "cell": "digest_SB_DFFER_Q_6_D_SB_LUT4_O_LC",
+              "loc": [
+                7,
+                10
+              ],
+              "port": "O"
+            },
+            "type": "clk-to-q"
+          },
+          {
+            "delay": 3.881999969482422,
+            "from": {
+              "cell": "digest_SB_DFFER_Q_6_D_SB_LUT4_O_LC",
+              "loc": [
+                7,
+                10
+              ],
+              "port": "O"
+            },
+            "net": "digest[6]$SB_IO_OUT",
+            "sources": [
+              "C:\\Users\\mohammed\\Desktop\\INTERNSHIP\\.tools\\oss-cad-suite\\bin\\../share/yosys/ice40/cells_map.v:6.21-6.22"
+            ],
+            "to": {
+              "cell": "digest[6]$sb_io",
+              "loc": [
+                25,
+                33
+              ],
+              "port": "D_OUT_0"
+            },
+            "type": "routing"
+          }
+        ],
+        "to": "<async>"
+      }
+    ],
+    "fmax": {
+      "clk$SB_IO_IN_$glb_clk": {
+        "achieved": 61.21449279785156,
+        "constraint": 50
+      }
+    },
+    "utilization": {
+      "ICESTORM_LC": {
+        "available": 7680,
+        "used": 5863
+      },
+      "ICESTORM_PLL": {
+        "available": 2,
+        "used": 0
+      },
+      "ICESTORM_RAM": {
+        "available": 32,
+        "used": 0
+      },
+      "SB_GB": {
+        "available": 8,
+        "used": 6
+      },
+      "SB_IO": {
+        "available": 206,
+        "used": 54
+      },
+      "SB_WARMBOOT": {
+        "available": 1,
+        "used": 0
+      }
+    }
+  }
+}
